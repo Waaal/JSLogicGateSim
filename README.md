@@ -11,4 +11,4 @@ A Logic Gate Simulatore done in Javascript.
 ### Connection colors
 - grey = connected to nothing
 - blue = low
-- red = hig
+- red = high
