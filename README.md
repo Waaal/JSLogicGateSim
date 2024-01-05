@@ -12,3 +12,6 @@ A Logic Gate Simulatore done in Javascript.
 - grey = connected to nothing
 - blue = low
 - red = high
+
+### Working SR-FlipFlop
+![Image](flip_flop_with_nor.PNG)
