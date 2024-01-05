@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel = "stylesheet" href = "assets/css/style.css"/>
+        <link rel = "stylesheet" href = "assets/css/index.css"/>
+
+        <script src = "assets/js/gateHandler.js"></script>
+        <script src = "assets/js/parts.js"></script>
+
+        <script src = "assets/js/app.js"></script>
+        <script src = "assets/js/grid.js"></script>
+
+        <title>Logic Gate</title>
+    </head>
+    <body>
+        <div CLASS = "menuContainer">
+            <div CLASS = "placeContainer" ID = "placeMenu">
+                <div>
+                    <div CLASS = "menuBar"></div>
+                    <div CLASS = "menuBar"></div>
+                    <div CLASS = "menuBar"></div>
+                </div>
+            </div>
+            <div CLASS = "posContainer">
+                <span><label ID = "posY-label-ID">0</label> Y</span>
+                <span><label ID = "posX-label-ID">0</label> X</span>
+            </div>
+            <div CLASS = "zoomContainer">
+                <span><label ID = "zoom-label-ID"></label>x</span>
+            </div>
+        </div>
+        <ul CLASS = "BuildMenu" ID = "buildMenu">
+            <h3>Place menu</h3>
+            <li CLASS = "collapseHeader"><div><label>Gates</label> <span>ᐅ</span></div>
+                <ul CLASS = "collapseMenu">
+                    <li onclick = "placeGate('AND');">and</li>
+                    <li onclick = "placeGate('NAND');">nand</li>
+                    <li onclick = "placeGate('OR');">or</li>
+                    <li onclick = "placeGate('NOT');">not</li>
+                </ul>
+            </li>
+            <li CLASS = "collapseHeader"><div><label>Inputs</label> <span>ᐅ</span></div>
+                <ul CLASS = "collapseMenu">
+                    <li onclick = "placeInput('BUTTON');">Button</li>
+                    <li onclick = "placeInput('HIGH');">High</li>
+                </ul>
+            </li>
+            <li CLASS = "collapseHeader"><div><label>Connector</label> <span>ᐅ</span></div>
+                <ul CLASS = "collapseMenu">
+                    <li onclick = "placeGate('CONN');">Connection</li>
+                </ul>
+            </li>
+        </ul>
+        <div CLASS = "contextMenu" ID = "contextMenu-ID">
+            <div CLASS = "header">
+                2-AND Gate<span CLASS = "id">#hd73tc</span>
+            </div>
+            <ul>
+                <li onclick = "openInfo();">Info</li>
+                <li onclick = "deleteGate();">Delete</li>
+            </ul>
+        </div>
+        <div CLASS = "info-container" ID = "info-ID">
+            <div CLASS = "info-content" ID = "info-content-ID">
+            </div>
+            <canvas CLASS = "preview-canvas" ID = "preview-canvas-ID" width="270px" height="370px">            
+            </canvas>
+        </div>
+        <canvas ID = "mainCanvas">
+        </canvas>
+    </body>
+</html>
